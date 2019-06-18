@@ -81,5 +81,4 @@ namespace egret.baidugame {
             this.dispatchEvent(event);
         };
     }
-    egret.Geolocation = egret.baidugame.WebGeolocation;
 }
