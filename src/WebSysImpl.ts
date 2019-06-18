@@ -139,6 +139,7 @@ namespace egret.baidugame {
     egret.sys.drawTextureElements = drawTextureElements;
     
     egret.Geolocation = egret.baidugame.WebGeolocation;
+    egret.Motion = egret.baidugame.WebMotion;
 }
 
 // window["sharedCanvas"].isCanvas = true;

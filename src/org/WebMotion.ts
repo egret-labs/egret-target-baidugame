@@ -49,5 +49,4 @@ namespace egret.baidugame {
             this.dispatchEvent(event);
         }
     }
-    egret.Motion = egret.baidugame.WebMotion;
 }
