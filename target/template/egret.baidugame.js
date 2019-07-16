@@ -2280,11 +2280,7 @@ r.prototype = e.prototype, t.prototype = new r();
          * 创建一个canvas。
          */
         function __createCanvas__(width, height) {
-            var canvas = document.createElement("canvas");
-            if (!isNaN(width) && !isNaN(height)) {
-                canvas.width = width;
-                canvas.height = height;
-            }
+            var canvas = egret.sys.createCanvas(width, height);
             var context = canvas.getContext("2d");
             if (context["imageSmoothingEnabled"] === undefined) {
                 var keys = ["webkitImageSmoothingEnabled", "mozImageSmoothingEnabled", "msImageSmoothingEnabled"];
@@ -2318,12 +2314,13 @@ r.prototype = e.prototype, t.prototype = new r();
          */
         var CanvasRenderBuffer = (function () {
             function CanvasRenderBuffer(width, height, root) {
-                this.surface = egret.sys.createCanvasRenderBufferSurface(__createCanvas__, width, height);
+                this.surface = egret.sys.createCanvasRenderBufferSurface(__createCanvas__, width, height, root);
                 this.context = this.surface.getContext("2d");
                 if (this.context) {
                     this.context.$offsetX = 0;
                     this.context.$offsetY = 0;
                 }
+                this.resize(width, height);
             }
             Object.defineProperty(CanvasRenderBuffer.prototype, "width", {
                 /**
