@@ -31,7 +31,7 @@ declare const swan: any;
 
 namespace egret.baidugame {
     /**
-     * 微信小游戏支持库版本号
+     * 小游戏支持库版本号
      */
     export let version = "0.1.0";
 }
