@@ -2784,7 +2784,7 @@ r.prototype = e.prototype, t.prototype = new r();
         /**
          * 小游戏支持库版本号
          */
-        baidugame.version = "0.2.0";
+        baidugame.version = "0.2.1";
     })(baidugame = egret.baidugame || (egret.baidugame = {}));
 })(egret || (egret = {}));
 (function (egret) {
@@ -4355,7 +4355,7 @@ egret.DeviceOrientation = egret.baidugame.WebDeviceOrientation;
                 * 混入tintcolor => alpha
                 */
                 alpha = Math.min(alpha, 1.0);
-                var globalTintColor = buffer.globalTintColor;
+                var globalTintColor = buffer.globalTintColor || 0xFFFFFF;
                 var currentTexture = buffer.currentTexture;
                 alpha = ((alpha < 1.0 && currentTexture && currentTexture[egret.UNPACK_PREMULTIPLY_ALPHA_WEBGL]) ?
                     egret.WebGLUtils.premultiplyTint(globalTintColor, alpha)
