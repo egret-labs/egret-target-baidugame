@@ -87,7 +87,6 @@ function loadImage(imageURL, scale9grid) {
 
         }
         image.onerror = (e) => {
-            console.error(e);
             const error = new RES.ResourceManagerError(1001, imageURL);
             reject(error);
         }
