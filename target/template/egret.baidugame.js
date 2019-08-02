@@ -2777,6 +2777,7 @@ r.prototype = e.prototype, t.prototype = new r();
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
+// declare const swan: any;
 
 (function (egret) {
     var baidugame;
