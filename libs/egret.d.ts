@@ -9163,6 +9163,9 @@ declare namespace egret {
         contentHeight?: number;
         orientation?: string;
         maxTouches?: number;
+        showFPS?: boolean;
+        showLog?: boolean;
+        fpsStyles?:string;
     };
     /**
      * egret project entry function

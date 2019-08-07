@@ -103,8 +103,8 @@ namespace egret.baidugame {
             option.maxTouches = options.maxTouches;
             option.textureScaleFactor = 1;
 
-            option.showFPS = false;
-            var styleStr = "x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9";
+            option.showFPS = options.showFPS;
+            var styleStr = options.fpsStyles ||  "x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9";
 
             let stylesArr = styleStr.split(",");
             let styles = {};
@@ -114,7 +114,7 @@ namespace egret.baidugame {
             }
             option.fpsStyles = styles;
 
-            option.showLog = false;
+            option.showLog = options.showLog;
             option.logFilter = "";
 
             return option;
