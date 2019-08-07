@@ -39,7 +39,7 @@ class ImageProcessor {
                 //通过缓存机制加载
                 const fullname = path.getLocalFilePath(imageSrc);
                 if (fs.existsSync(fullname)) {
-                    // console.log('缓存命中:', url, target)
+                    // console.log('缓存命中:', fullname)
                     return loadImage(path.getWxUserPath(fullname), scale9Grid);
                 } else {
                     return download(imageSrc, fullname).then(
@@ -87,7 +87,6 @@ function loadImage(imageURL, scale9grid) {
 
         }
         image.onerror = (e) => {
-            console.error(e);
             const error = new RES.ResourceManagerError(1001, imageURL);
             reject(error);
         }
@@ -129,7 +128,7 @@ function download(url, target) {
 }
 
 /**
- * 由于微信小游戏限制只有50M的资源可以本地存储，
+ * 由于小游戏限制只有50M的资源可以本地存储，
  * 所以开发者应根据URL进行判断，将特定资源进行本地缓存
  */
 function needCache(root, url) {

@@ -93,7 +93,7 @@ function loadText(xhrURL) {
 }
 
 /**
- * 由于微信小游戏限制只有50M的资源可以本地存储，
+ * 由于小游戏限制只有50M的资源可以本地存储，
  * 所以开发者应根据URL进行判断，将特定资源进行本地缓存
  */
 function needCache(root, url) {
