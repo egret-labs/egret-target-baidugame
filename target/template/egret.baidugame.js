@@ -2777,6 +2777,7 @@ r.prototype = e.prototype, t.prototype = new r();
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
+// declare const swan: any;
 
 (function (egret) {
     var baidugame;
@@ -2784,7 +2785,7 @@ r.prototype = e.prototype, t.prototype = new r();
         /**
          * 小游戏支持库版本号
          */
-        baidugame.version = "0.2.2";
+        baidugame.version = "0.2.5";
     })(baidugame = egret.baidugame || (egret.baidugame = {}));
 })(egret || (egret = {}));
 (function (egret) {
@@ -3724,6 +3725,138 @@ egret.Capabilities["runtimeType" + ""] = "baidugame";
     })(baidugame = egret.baidugame || (egret.baidugame = {}));
 })(egret || (egret = {}));
 egret.DeviceOrientation = egret.baidugame.WebDeviceOrientation;
+//////////////////////////////////////////////////////////////////////////////////////
+//
+//  Copyright (c) 2014-present, Egret Technology.
+//  All rights reserved.
+//  Redistribution and use in source and binary forms, with or without
+//  modification, are permitted provided that the following conditions are met:
+//
+//     * Redistributions of source code must retain the above copyright
+//       notice, this list of conditions and the following disclaimer.
+//     * Redistributions in binary form must reproduce the above copyright
+//       notice, this list of conditions and the following disclaimer in the
+//       documentation and/or other materials provided with the distribution.
+//     * Neither the name of the Egret nor the
+//       names of its contributors may be used to endorse or promote products
+//       derived from this software without specific prior written permission.
+//
+//  THIS SOFTWARE IS PROVIDED BY EGRET AND CONTRIBUTORS "AS IS" AND ANY EXPRESS
+//  OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+//  OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+//  IN NO EVENT SHALL EGRET AND CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+//  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+//  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;LOSS OF USE, DATA,
+//  OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+//  LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+//  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+//  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+//
+//////////////////////////////////////////////////////////////////////////////////////
+
+(function (egret) {
+    /**
+     * @private
+     */
+    var WebGLUtils = (function () {
+        function WebGLUtils() {
+        }
+        WebGLUtils.compileProgram = function (gl, vertexSrc, fragmentSrc) {
+            var fragmentShader = WebGLUtils.compileFragmentShader(gl, fragmentSrc);
+            var vertexShader = WebGLUtils.compileVertexShader(gl, vertexSrc);
+            var shaderProgram = gl.createProgram();
+            gl.attachShader(shaderProgram, vertexShader);
+            gl.attachShader(shaderProgram, fragmentShader);
+            gl.linkProgram(shaderProgram);
+            if (!gl.getProgramParameter(shaderProgram, gl.LINK_STATUS)) {
+                egret.$warn(1020);
+            }
+            return shaderProgram;
+        };
+        WebGLUtils.compileFragmentShader = function (gl, shaderSrc) {
+            return WebGLUtils._compileShader(gl, shaderSrc, gl.FRAGMENT_SHADER);
+        };
+        WebGLUtils.compileVertexShader = function (gl, shaderSrc) {
+            return WebGLUtils._compileShader(gl, shaderSrc, gl.VERTEX_SHADER);
+        };
+        WebGLUtils._compileShader = function (gl, shaderSrc, shaderType) {
+            var shader = gl.createShader(shaderType);
+            gl.shaderSource(shader, shaderSrc);
+            gl.compileShader(shader);
+            if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+                //egret.info(gl.getShaderInfoLog(shader));
+                return null;
+            }
+            return shader;
+        };
+        WebGLUtils.checkCanUseWebGL = function () {
+            if (WebGLUtils.canUseWebGL == undefined) {
+                try {
+                    var canvas = document.createElement("canvas");
+                    WebGLUtils.canUseWebGL = !!window["WebGLRenderingContext"]
+                        && !!(canvas.getContext("webgl") || canvas.getContext("experimental-webgl"));
+                }
+                catch (e) {
+                    WebGLUtils.canUseWebGL = false;
+                }
+            }
+            return WebGLUtils.canUseWebGL;
+        };
+        WebGLUtils.deleteWebGLTexture = function (webglTexture) {
+            if (!webglTexture) {
+                return;
+            }
+            if (webglTexture[egret.engine_default_empty_texture]) {
+                if (true) {
+                    //引擎默认的空白纹理，不允许删除
+                    console.warn('deleteWebGLTexture:' + egret.engine_default_empty_texture);
+                }
+                return;
+            }
+            var gl = webglTexture[egret.glContext];
+            if (gl) {
+                gl.deleteTexture(webglTexture);
+            }
+            else {
+                if (true) {
+                    console.error('deleteWebGLTexture gl = ' + gl);
+                }
+            }
+            /*old
+            if (webglTexture && !webglTexture['engine_default_empty_texture']) {
+                const gl = webglTexture['glContext'] as WebGLRenderingContext;//bitmapData.glContext;
+                if (gl) {
+                    gl.deleteTexture(webglTexture);
+                }
+                else {
+                    console.error('deleteWebGLTexture gl = ' + gl);
+                }
+            }
+            */
+        };
+        /**
+         * inspired by pixi.js
+         */
+        WebGLUtils.premultiplyTint = function (tint, alpha) {
+            if (alpha === 1.0) {
+                return (alpha * 255 << 24) + tint;
+            }
+            if (alpha === 0.0) {
+                return 0;
+            }
+            var R = ((tint >> 16) & 0xFF);
+            var G = ((tint >> 8) & 0xFF);
+            var B = (tint & 0xFF);
+            R = ((R * alpha) + 0.5) | 0;
+            G = ((G * alpha) + 0.5) | 0;
+            B = ((B * alpha) + 0.5) | 0;
+            return (alpha * 255 << 24) + (R << 16) + (G << 8) + B;
+        };
+        return WebGLUtils;
+    }());
+    egret.WebGLUtils = WebGLUtils;
+    __reflect(WebGLUtils.prototype, "egret.WebGLUtils");
+})(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
 //  Copyright (c) 2014-present, Egret Technology.
@@ -7797,7 +7930,7 @@ egret.DeviceOrientation = egret.baidugame.WebDeviceOrientation;
             uniform sampler2D uSamplerAlphaMask;
     
             void main(void){
-                float alpha = texture2D(uSamplerAlphaMask, vTextureCoord);
+                float alpha = texture2D(uSamplerAlphaMask, vTextureCoord).r;
                 if (alpha < 0.0039) { discard; }
                 vec4 texColor = texture2D(uSampler, vTextureCoord);
                 if(texColor.a > 0.0) {
@@ -7810,7 +7943,7 @@ egret.DeviceOrientation = egret.baidugame.WebDeviceOrientation;
                 gl_FragColor = v4Color * vColor;
             }"
             */
-            EgretShaderLib.colorTransform_frag_etc_alphamask_frag = "precision mediump float;\r\nvarying vec2 vTextureCoord;\r\nvarying vec4 vColor;\r\nuniform mat4 matrix;\r\nuniform vec4 colorAdd;\r\nuniform sampler2D uSampler;\r\nuniform sampler2D uSamplerAlphaMask;\r\n\r\nvoid main(void){\r\nfloat alpha = texture2D(uSamplerAlphaMask, vTextureCoord);\r\nif (alpha < 0.0039) { discard; }\r\nvec4 texColor = texture2D(uSampler, vTextureCoord);\r\nif(texColor.a > 0.0) {\r\n // 抵消预乘的alpha通道\r\ntexColor = vec4(texColor.rgb / texColor.a, texColor.a);\r\n}\r\nvec4 v4Color = clamp(texColor * matrix + colorAdd, 0.0, 1.0);\r\nv4Color.rgb = v4Color.rgb * alpha;\r\nv4Color.a = alpha;\r\ngl_FragColor = v4Color * vColor;\r\n}";
+            EgretShaderLib.colorTransform_frag_etc_alphamask_frag = "precision mediump float;\r\nvarying vec2 vTextureCoord;\r\nvarying vec4 vColor;\r\nuniform mat4 matrix;\r\nuniform vec4 colorAdd;\r\nuniform sampler2D uSampler;\r\nuniform sampler2D uSamplerAlphaMask;\r\n\r\nvoid main(void){\r\nfloat alpha = texture2D(uSamplerAlphaMask, vTextureCoord).r;\r\nif (alpha < 0.0039) { discard; }\r\nvec4 texColor = texture2D(uSampler, vTextureCoord);\r\nif(texColor.a > 0.0) {\r\n // 抵消预乘的alpha通道\r\ntexColor = vec4(texColor.rgb / texColor.a, texColor.a);\r\n}\r\nvec4 v4Color = clamp(texColor * matrix + colorAdd, 0.0, 1.0);\r\nv4Color.rgb = v4Color.rgb * alpha;\r\nv4Color.a = alpha;\r\ngl_FragColor = v4Color * vColor;\r\n}";
             return EgretShaderLib;
         }());
         baidugame.EgretShaderLib = EgretShaderLib;
