@@ -49,7 +49,6 @@ class ImageProcessor {
                         },
 
                         (error) => {
-                            console.error(error);
                             return;
                         });
                 }
