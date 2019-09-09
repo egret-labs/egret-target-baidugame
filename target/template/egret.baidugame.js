@@ -8,7 +8,7 @@ var __extends = this && this.__extends || function __extends(t, e) {
 for (var i in e) e.hasOwnProperty(i) && (t[i] = e[i]);
 r.prototype = e.prototype, t.prototype = new r();
 };
-
+var egret;
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -82,7 +82,7 @@ r.prototype = e.prototype, t.prototype = new r();
         __reflect(WebGeolocation.prototype, "egret.baidugame.WebGeolocation", ["egret.Geolocation"]);
     })(baidugame = egret.baidugame || (egret.baidugame = {}));
 })(egret || (egret = {}));
-
+var egret;
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -168,7 +168,7 @@ r.prototype = e.prototype, t.prototype = new r();
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-
+var egret;
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -229,7 +229,7 @@ r.prototype = e.prototype, t.prototype = new r();
                 option.entryClassName = options.entryClassName || "Main";
                 option.scaleMode = options.scaleMode || egret.StageScaleMode.FIXED_WIDTH;
                 if (!option.scaleMode || option.scaleMode == egret.StageScaleMode.SHOW_ALL) {
-                    option.scaleMode = egret.StageScaleMode.FIXED_WIDE;
+                    option.scaleMode = egret.StageScaleMode.FIXED_WIDTH;
                     var message = egret.sys.tr(4500, "showAll", "fixedWidth");
                     console.warn(message);
                 }
@@ -380,7 +380,7 @@ r.prototype = e.prototype, t.prototype = new r();
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-
+var egret;
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -569,7 +569,7 @@ r.prototype = e.prototype, t.prototype = new r();
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-
+var egret;
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -721,7 +721,7 @@ r.prototype = e.prototype, t.prototype = new r();
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-
+var egret;
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -923,7 +923,7 @@ r.prototype = e.prototype, t.prototype = new r();
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-
+var egret;
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -1098,7 +1098,7 @@ r.prototype = e.prototype, t.prototype = new r();
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-
+var egret;
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -1643,7 +1643,7 @@ r.prototype = e.prototype, t.prototype = new r();
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-
+var egret;
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -1873,7 +1873,7 @@ r.prototype = e.prototype, t.prototype = new r();
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-
+var egret;
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -2044,7 +2044,7 @@ r.prototype = e.prototype, t.prototype = new r();
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-
+var egret;
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -2200,7 +2200,7 @@ r.prototype = e.prototype, t.prototype = new r();
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-
+var egret;
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -2273,7 +2273,7 @@ r.prototype = e.prototype, t.prototype = new r();
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-
+var egret;
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -2416,7 +2416,7 @@ r.prototype = e.prototype, t.prototype = new r();
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-
+var egret;
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -2586,7 +2586,7 @@ r.prototype = e.prototype, t.prototype = new r();
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-
+var egret;
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -2642,7 +2642,7 @@ r.prototype = e.prototype, t.prototype = new r();
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-
+var egret;
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -2779,14 +2779,14 @@ r.prototype = e.prototype, t.prototype = new r();
 //
 //////////////////////////////////////////////////////////////////////////////////////
 // declare const swan: any;
-
+var egret;
 (function (egret) {
     var baidugame;
     (function (baidugame) {
         /**
          * 小游戏支持库版本号
          */
-        baidugame.version = "0.2.7";
+        baidugame.version = "0.1.0";
     })(baidugame = egret.baidugame || (egret.baidugame = {}));
 })(egret || (egret = {}));
 (function (egret) {
@@ -2970,7 +2970,7 @@ egret.Capabilities["runtimeType" + ""] = "baidugame";
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-
+var egret;
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -3039,7 +3039,7 @@ egret.Capabilities["runtimeType" + ""] = "baidugame";
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-
+var egret;
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -3156,7 +3156,7 @@ egret.Capabilities["runtimeType" + ""] = "baidugame";
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-
+var egret;
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -3198,7 +3198,7 @@ egret.Capabilities["runtimeType" + ""] = "baidugame";
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-
+var egret;
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -3257,7 +3257,7 @@ egret.Capabilities["runtimeType" + ""] = "baidugame";
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-
+var egret;
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -3417,7 +3417,7 @@ egret.Capabilities["runtimeType" + ""] = "baidugame";
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-
+var egret;
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -3557,7 +3557,7 @@ egret.Capabilities["runtimeType" + ""] = "baidugame";
         egret.XML = { parse: parse };
     })(baidugame = egret.baidugame || (egret.baidugame = {}));
 })(egret || (egret = {}));
-
+var egret;
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -3629,7 +3629,7 @@ egret.DeviceOrientation = egret.baidugame.WebDeviceOrientation;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-
+var egret;
 (function (egret) {
     /**
      * @private
@@ -3761,7 +3761,7 @@ egret.DeviceOrientation = egret.baidugame.WebDeviceOrientation;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-
+var egret;
 (function (egret) {
     /**
      * 转换 Image，Canvas，Video 为 Egret 框架内使用的 BitmapData 对象。
@@ -3802,7 +3802,7 @@ egret.DeviceOrientation = egret.baidugame.WebDeviceOrientation;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-
+var egret;
 (function (egret) {
     var localStorage;
     (function (localStorage) {
@@ -3884,7 +3884,7 @@ egret.DeviceOrientation = egret.baidugame.WebDeviceOrientation;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-
+var egret;
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -3969,7 +3969,7 @@ egret.DeviceOrientation = egret.baidugame.WebDeviceOrientation;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-
+var egret;
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -4232,7 +4232,7 @@ egret.DeviceOrientation = egret.baidugame.WebDeviceOrientation;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-
+var egret;
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -4576,7 +4576,7 @@ egret.DeviceOrientation = egret.baidugame.WebDeviceOrientation;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-
+var egret;
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -4725,7 +4725,7 @@ egret.DeviceOrientation = egret.baidugame.WebDeviceOrientation;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-
+var egret;
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -5793,7 +5793,7 @@ egret.DeviceOrientation = egret.baidugame.WebDeviceOrientation;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-
+var egret;
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -6191,7 +6191,7 @@ egret.DeviceOrientation = egret.baidugame.WebDeviceOrientation;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-
+var egret;
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -7335,7 +7335,7 @@ egret.DeviceOrientation = egret.baidugame.WebDeviceOrientation;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-
+var egret;
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -7428,7 +7428,7 @@ egret.DeviceOrientation = egret.baidugame.WebDeviceOrientation;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-
+var egret;
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -7533,7 +7533,7 @@ egret.DeviceOrientation = egret.baidugame.WebDeviceOrientation;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-
+var egret;
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -7767,7 +7767,7 @@ egret.DeviceOrientation = egret.baidugame.WebDeviceOrientation;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-
+var egret;
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -7858,7 +7858,7 @@ egret.DeviceOrientation = egret.baidugame.WebDeviceOrientation;
 /*
 *** 一个管理模型，逐级包含: back -> page -> line -> textBlock
 */
-
+var egret;
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -8223,7 +8223,7 @@ egret.DeviceOrientation = egret.baidugame.WebDeviceOrientation;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-
+var egret;
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -8593,7 +8593,7 @@ egret.DeviceOrientation = egret.baidugame.WebDeviceOrientation;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-
+var egret;
 (function (egret) {
     var baidugame;
     (function (baidugame) {
