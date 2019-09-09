@@ -8,7 +8,7 @@ var __extends = this && this.__extends || function __extends(t, e) {
 for (var i in e) e.hasOwnProperty(i) && (t[i] = e[i]);
 r.prototype = e.prototype, t.prototype = new r();
 };
-var egret;
+
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -82,7 +82,7 @@ var egret;
         __reflect(WebGeolocation.prototype, "egret.baidugame.WebGeolocation", ["egret.Geolocation"]);
     })(baidugame = egret.baidugame || (egret.baidugame = {}));
 })(egret || (egret = {}));
-var egret;
+
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -168,7 +168,7 @@ var egret;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-var egret;
+
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -380,7 +380,7 @@ var egret;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-var egret;
+
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -569,7 +569,7 @@ var egret;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-var egret;
+
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -721,7 +721,7 @@ var egret;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-var egret;
+
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -923,7 +923,7 @@ var egret;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-var egret;
+
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -1098,7 +1098,7 @@ var egret;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-var egret;
+
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -1643,7 +1643,7 @@ var egret;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-var egret;
+
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -1873,7 +1873,7 @@ var egret;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-var egret;
+
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -2044,7 +2044,7 @@ var egret;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-var egret;
+
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -2200,7 +2200,7 @@ var egret;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-var egret;
+
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -2273,7 +2273,7 @@ var egret;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-var egret;
+
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -2416,7 +2416,7 @@ var egret;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-var egret;
+
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -2586,7 +2586,7 @@ var egret;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-var egret;
+
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -2642,7 +2642,7 @@ var egret;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-var egret;
+
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -2779,14 +2779,14 @@ var egret;
 //
 //////////////////////////////////////////////////////////////////////////////////////
 // declare const swan: any;
-var egret;
+
 (function (egret) {
     var baidugame;
     (function (baidugame) {
         /**
          * 小游戏支持库版本号
          */
-        baidugame.version = "0.1.0";
+        baidugame.version = "0.2.7";
     })(baidugame = egret.baidugame || (egret.baidugame = {}));
 })(egret || (egret = {}));
 (function (egret) {
@@ -2970,7 +2970,7 @@ egret.Capabilities["runtimeType" + ""] = "baidugame";
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-var egret;
+
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -3039,7 +3039,7 @@ var egret;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-var egret;
+
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -3156,7 +3156,7 @@ var egret;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-var egret;
+
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -3198,7 +3198,7 @@ var egret;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-var egret;
+
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -3257,7 +3257,7 @@ var egret;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-var egret;
+
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -3417,7 +3417,7 @@ var egret;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-var egret;
+
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -3557,7 +3557,7 @@ var egret;
         egret.XML = { parse: parse };
     })(baidugame = egret.baidugame || (egret.baidugame = {}));
 })(egret || (egret = {}));
-var egret;
+
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -3629,7 +3629,7 @@ egret.DeviceOrientation = egret.baidugame.WebDeviceOrientation;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-var egret;
+
 (function (egret) {
     /**
      * @private
@@ -3761,7 +3761,7 @@ var egret;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-var egret;
+
 (function (egret) {
     /**
      * 转换 Image，Canvas，Video 为 Egret 框架内使用的 BitmapData 对象。
@@ -3802,7 +3802,7 @@ var egret;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-var egret;
+
 (function (egret) {
     var localStorage;
     (function (localStorage) {
@@ -3884,7 +3884,7 @@ var egret;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-var egret;
+
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -3969,7 +3969,7 @@ var egret;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-var egret;
+
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -4232,7 +4232,7 @@ var egret;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-var egret;
+
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -4576,7 +4576,7 @@ var egret;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-var egret;
+
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -4725,7 +4725,7 @@ var egret;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-var egret;
+
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -5793,7 +5793,7 @@ var egret;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-var egret;
+
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -6191,7 +6191,7 @@ var egret;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-var egret;
+
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -7335,7 +7335,7 @@ var egret;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-var egret;
+
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -7428,7 +7428,7 @@ var egret;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-var egret;
+
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -7533,7 +7533,7 @@ var egret;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-var egret;
+
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -7767,7 +7767,7 @@ var egret;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-var egret;
+
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -7858,7 +7858,7 @@ var egret;
 /*
 *** 一个管理模型，逐级包含: back -> page -> line -> textBlock
 */
-var egret;
+
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -8223,7 +8223,7 @@ var egret;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-var egret;
+
 (function (egret) {
     var baidugame;
     (function (baidugame) {
@@ -8593,7 +8593,7 @@ var egret;
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
-var egret;
+
 (function (egret) {
     var baidugame;
     (function (baidugame) {
