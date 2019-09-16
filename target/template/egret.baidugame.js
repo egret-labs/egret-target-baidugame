@@ -474,11 +474,12 @@ r.prototype = e.prototype, t.prototype = new r();
              * @inheritDoc
              */
             HtmlSound.prototype.close = function () {
-                if (this.loaded == false && this.originAudio)
+                if (this.loaded && this.originAudio)
                     this.originAudio.src = "";
                 if (this.originAudio)
                     this.originAudio = null;
                 HtmlSound.$clear(this.url);
+                this.loaded = false;
             };
             HtmlSound.$clear = function (url) {
                 HtmlSound.clearAudios[url] = true;
