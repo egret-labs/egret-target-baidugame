@@ -2786,7 +2786,7 @@ r.prototype = e.prototype, t.prototype = new r();
         /**
          * 小游戏支持库版本号
          */
-        baidugame.version = "0.2.7";
+        baidugame.version = "0.2.8";
     })(baidugame = egret.baidugame || (egret.baidugame = {}));
 })(egret || (egret = {}));
 (function (egret) {
