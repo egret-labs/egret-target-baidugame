@@ -1733,7 +1733,7 @@ r.prototype = e.prototype, t.prototype = new r();
 (function (egret) {
     var baidugame;
     (function (baidugame) {
-        baidugame.version = "0.3.1";
+        baidugame.version = "0.3.2";
     })(baidugame = egret.baidugame || (egret.baidugame = {}));
 })(egret || (egret = {}));
 (function (egret) {
@@ -5173,7 +5173,9 @@ egret.DeviceOrientation = egret.baidugame.WebDeviceOrientation;
                 var renderContext = baidugame.WebGLRenderContext.getInstance();
                 var gl = renderContext.context;
                 renderContext.$beforeRender();
-                gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
+                var width = renderContext.surface.width;
+                var height = renderContext.surface.height;
+                gl.viewport(0, 0, width, height);
             };
             return WebGLRenderer;
         }());
